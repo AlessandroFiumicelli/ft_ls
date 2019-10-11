@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_start.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:43:42 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 18:00:26 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void	stampa(t_file *files, t_flag *flag, int i, int rec)
@@ -28,4 +40,3 @@ void	stampa(t_file *files, t_flag *flag, int i, int rec)
 			ft_putchar('\n');
 	}
 }
-

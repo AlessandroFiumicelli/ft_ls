@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   len_info.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:41:22 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:55:09 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 int		grp_len(t_file *files, gid_t gid)
@@ -20,7 +32,7 @@ int		grp_len(t_file *files, gid_t gid)
 int		usr_len(t_file *files, uid_t uid)
 {
 	char	*tmp;
-	t_uid   *us;
+	t_uid	*us;
 	int		chk;
 
 	chk = files->u_len;

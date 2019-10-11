@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_info.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:44:06 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 18:04:04 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 int		lessico(t_file *files, t_flag *flag, int i)
 {
-if (flag->rev == 0 && ft_strcmp(files->name[i], files->name[i -1]) < 0)
+	if (flag->rev == 0 && ft_strcmp(files->name[i], files->name[i - 1]) < 0)
 		return (1);
 	else if (flag->rev == 1 &&
 	ft_strcmp(files->name[i], files->name[i - 1]) > 0)
@@ -12,8 +24,8 @@ if (flag->rev == 0 && ft_strcmp(files->name[i], files->name[i -1]) < 0)
 
 int		tempo(t_file *files, t_flag *flag, int i)
 {
-	t_stat  st1;
-	t_stat  st2;
+	t_stat	st1;
+	t_stat	st2;
 
 	lstat(files->path[i], &st1);
 	lstat(files->path[i - 1], &st2);
@@ -34,7 +46,7 @@ int		da_effettuare(t_file *files, t_flag *flag, int i)
 
 void	scambio(t_file *files, int i)
 {
-	void    *tmp;
+	void	*tmp;
 
 	tmp = files->name[i];
 	files->name[i] = files->name[i - 1];

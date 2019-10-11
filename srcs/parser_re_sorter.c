@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser_re_sorter.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:42:38 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:57:34 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void	re_sort_files(t_flag *flag)
@@ -11,7 +23,7 @@ void	re_sort_files(t_flag *flag)
 	while (flag->args[i + 1])
 	{
 		lstat(flag->args[i], &st1);
-		lstat(flag->args[i + 1], & st2);
+		lstat(flag->args[i + 1], &st2);
 		if (st1.st_mtimespec.tv_sec < st2.st_mtimespec.tv_sec)
 		{
 			tmp = flag->args[i];
@@ -34,7 +46,7 @@ void	re_sort_dirs(t_flag *flag)
 	while (flag->dirs[i + 1])
 	{
 		lstat(flag->dirs[i], &st1);
-		lstat(flag->dirs[i + 1], & st2);
+		lstat(flag->dirs[i + 1], &st2);
 		if (st1.st_mtimespec.tv_sec < st2.st_mtimespec.tv_sec)
 		{
 			tmp = flag->dirs[i];

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   errors.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:41:04 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:45:57 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void	ft_error(char *name)
@@ -28,6 +40,6 @@ void	ls_error(char *str, char opt)
 		ft_putchar_fd(opt, 2);
 		ft_putchar_fd('\n', 2);
 		ft_putendl_fd("usage: ls [-Ralrt] [file ...]", 2);
-		exit (1);
+		exit(1);
 	}
 }

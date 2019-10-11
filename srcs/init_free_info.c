@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_free_info.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:41:13 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:53:09 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 t_file	*free_all(t_file *files, int f_c)
@@ -26,10 +38,10 @@ void	nullifica(t_file *files, int f_c)
 	i = 0;
 	while (i <= f_c)
 	{
-	files->name[i] = NULL;
-	files->s_lnk[i] = NULL;
-	files->path[i] = NULL;
-	i++;
+		files->name[i] = NULL;
+		files->s_lnk[i] = NULL;
+		files->path[i] = NULL;
+		i++;
 	}
 	files->crt = NULL;
 }
@@ -51,8 +63,8 @@ void	files_init(t_file *files, int f_c)
 
 int		files_count(DIR *dirp, t_flag *flag)
 {
-	t_dir   *entr;
-	int             f_c;
+	t_dir	*entr;
+	int		f_c;
 
 	f_c = 0;
 	while ((entr = readdir(dirp)))

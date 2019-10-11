@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   recursion.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:43:56 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 18:02:26 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
-void    get_crt(t_file *files)
+void	get_crt(t_file *files)
 {
 	t_stat	st;
 	int		i;
@@ -24,7 +36,7 @@ void    get_crt(t_file *files)
 		ft_strcmp("..", files->name[i]))
 			files->crt[++j] = ft_strdup(files->path[i]);
 		i++;
-		}
+	}
 	files->crt[++j] = NULL;
 }
 

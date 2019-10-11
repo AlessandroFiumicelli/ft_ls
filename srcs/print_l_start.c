@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_l_start.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:43:30 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:59:57 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void	type(mode_t mode)
 {
 	if (S_ISDIR(mode))
 		ft_putchar('d');
-	else if(S_ISLNK(mode))
+	else if (S_ISLNK(mode))
 		ft_putchar('l');
-	else if(S_ISBLK(mode))
+	else if (S_ISBLK(mode))
 		ft_putchar('b');
 	else if (S_ISCHR(mode))
 		ft_putchar('c');

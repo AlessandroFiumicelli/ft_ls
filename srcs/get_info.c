@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_info.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/11 17:40:54 by alfiumic          #+#    #+#             */
+/*   Updated: 2019/10/11 17:50:30 by alfiumic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_ls.h"
 
 void	sizes(t_file *files, t_stat *st)
@@ -17,7 +29,7 @@ void	ordina(t_file *files, t_flag *flag, int i)
 	}
 }
 
-void	riempi_files_2(t_file *files, t_stat *st , int i)
+void	riempi_files_2(t_file *files, t_stat *st, int i)
 {
 	char	buf[NAME_MAX + 1];
 
@@ -31,9 +43,9 @@ void	riempi_files_2(t_file *files, t_stat *st , int i)
 
 void	riempi_files(t_file *files, t_flag *flag, char *name)
 {
-	char	*tmp;
-	t_stat	st;
-	int		i;
+	char		*tmp;
+	t_stat		st;
+	int			i;
 
 	if (flag->hid == 0 && name[0] == '.')
 		return ;
