@@ -6,7 +6,7 @@
 /*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 11:52:25 by alfiumic          #+#    #+#             */
-/*   Updated: 2019/10/12 11:52:27 by alfiumic         ###   ########.fr       */
+/*   Updated: 2019/10/12 15:12:00 by alfiumic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char const *s, int fd)
 {
 	int len;
-	
+
 	if (s)
 	{
 		len = ft_strlen(s);

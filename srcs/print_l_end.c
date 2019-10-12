@@ -6,7 +6,7 @@
 /*   By: alfiumic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 17:43:21 by alfiumic          #+#    #+#             */
-/*   Updated: 2019/10/11 17:43:23 by alfiumic         ###   ########.fr       */
+/*   Updated: 2019/10/12 15:02:16 by alfiumic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ void	stampa_tempo(t_file *files, int i)
 
 	lstat(files->path[i], &st);
 	tmp = ctime(&st.st_mtimespec.tv_sec);
-	ft_putchar(tmp[8]);
-	ft_putchar(tmp[9]);
-	ft_putchar(tmp[3]);
 	ft_putchar(tmp[4]);
 	ft_putchar(tmp[5]);
 	ft_putchar(tmp[6]);
+	ft_putchar(tmp[7]);
+	ft_putchar(tmp[8]);
+	ft_putchar(tmp[9]);
 	ft_putchar(tmp[10]);
 	if ((files->time - st.st_mtimespec.tv_sec) >= 15768000)
 		anno(tmp);
